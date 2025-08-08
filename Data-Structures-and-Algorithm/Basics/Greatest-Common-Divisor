@@ -1,0 +1,17 @@
+class Solution:
+    def gcd(n1,n2):
+        if n1>n2:
+            a=n2
+            b=n1
+        else:
+            a=n1
+            b=n2
+        if b%a==0:
+            return a
+        num=a-1
+        while a!=0:
+            if a%num==0:
+                if b%num==0:
+                    return num
+            num=num-1
+print(Solution.gcd(12,9))
